@@ -139,6 +139,7 @@ body {
     justify-content: space-between;
     color: var(--title-color);
     font-weight: var(--font-semi);
+    text-transform: capitalize;
     padding: 1.25rem 1.5rem;
     transition: background-color .3s;
 }
@@ -150,7 +151,7 @@ body {
 .show-menu {
     top: 3.5rem;
     opacity: 1;
-    position: initial;
+    pointer-events: initial;
 }
 .show-icon #openMenu {
     opacity: 0;
