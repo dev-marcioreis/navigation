@@ -113,7 +113,7 @@ body {
     opacity: 0;
 }
 
-/*==========Media Query tablet==========*/
+/*==========Media Query==========*/
 @media (max-width: 1024px) {
     .container {
         margin-inline: 0;
@@ -220,4 +220,12 @@ body {
 }
 .dropdown-link:hover {
     color: var(--title-color);
+}
+
+/*==========Media Query==========*/
+@media (max-width: 300px) {
+    .dropdown-group {
+        padding-left: 1.5rem;
+    }
+
 }
