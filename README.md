@@ -2,9 +2,9 @@
 
 ---
 
-Este será um navbar.
+Menu para futuro projeto.
 
-## 🚀 Em desenvolvimento...
+## 🚀 Finalizado
 
 ## 📋 Tecnologias
 HTML + CSS + JavaScript
