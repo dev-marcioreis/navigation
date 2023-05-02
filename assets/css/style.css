@@ -207,7 +207,7 @@ body {
     font-size: var(--small-font);
     font-weight: var(--font-semi);
     color: var(--title-color);
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 .dropdown-list {
     row-gap: .3rem;
@@ -228,4 +228,101 @@ body {
         padding-left: 1.5rem;
     }
 
+}
+
+/*==========Media Query==========*/
+@media (min-width: 1025px) {
+    .nav-toggle {
+        display: none;
+    }
+    .nav {
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav-list {
+        display: flex;
+        gap: 3rem;
+        height: 100%;
+    }
+    .nav li {
+        display: flex;
+    }
+    .nav-link {
+        padding: 0;
+    }
+    .nav-link:hover {
+        background: initial;
+    }
+    .dropdown-button {
+        pointer-events: none;
+        gap: .25rem;
+    }
+    .dropdown-container {
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        right: 0;
+        height: max-content;
+        border-radius: .5rem;
+        background: var(--semi-transparent);
+        box-shadow: var(--shadow);
+        pointer-events: none;
+        opacity: 0;
+        transition: top .4s, opacity .3s;
+    }
+    .dropdown-content {
+        grid-template-columns: repeat(4, max-content);
+        column-gap: 6rem;
+        margin-inline: auto;
+        max-width: 1120px;
+    }
+    .dropdown-group {
+        padding: 2rem;
+        align-content: baseline;
+        row-gap: 1rem;
+    }
+    .dropdown-group:first-child, .dropdown-group:last-child {
+        margin: 0 auto;
+    }
+    .dropdown-list {
+        row-gap: 1rem;
+    }
+    .dropdown-icon {
+        display: grid;
+        place-items: center;
+        width: 60px;
+        height: 60px;
+        background: var(--semi-transparent);
+        border-radius: 50%;
+        margin-block-end: 1rem;
+        box-shadow: var(--shadow);
+    }
+    .dropdown-icon i {
+        font-size: 2rem;
+        color: var(--color-lighten);
+    }
+    .dropdown-title {
+        font-size: var(--normal-font);
+    }
+    .dropdown-link {
+        font-size: var(--small-font);
+        transition: var(--transition);
+    }
+    .dropdown-link:hover {
+        color: var(--primary-color);
+        transform: translateX(10px);
+    } 
+    .dropdown-item {
+        cursor: pointer;
+    }
+    .dropdown-item:hover #dropdown-arrow {
+        transform: rotate(180deg);
+    }
+    .dropdown-item:hover > .dropdown-container {
+        top: 4rem;
+        opacity: 1;
+        pointer-events: initial;
+        cursor: initial;
+    }
+    
 }
