@@ -131,7 +131,12 @@ body {
         transition: top .4s, opacity .3s;
         overflow: auto;
     }
-
+    .nav-menu::-webkit-scrollbar {
+        width: .3rem;
+    }
+    .nav-menu::-webkit-scrollbar-thumb {
+        background: var(--semi-transparent);
+    }
 }
 
 .nav-link {
@@ -162,6 +167,9 @@ body {
     opacity: 1;
     transform: rotate(90deg);
 }
+.show-dropdown #dropdown-arrow {
+    transform: rotate(180deg);
+}
 
 /*==========Dropdown==========*/
 .dropdown-button {
@@ -175,7 +183,6 @@ body {
     display: grid;
 }
 .dropdown-container {
-    background: var(--semi-transparent);
     height: 0;
     overflow: hidden;
 }
