@@ -22,6 +22,7 @@
     --title-color: hsl(220, 48%, 28%);
     --text-color: hsl(220, 12%, 45%);
     --bg-color: hsl(220, 100%, 99%);
+    --semi-transparent: hsla(220, 68%, 54%, 0.274);
     --normal-font: .938rem;
     --small-font: .813rem;
     --smaller-font: .75rem;
@@ -144,7 +145,7 @@ body {
     transition: background-color .3s;
 }
 .nav-link:hover {
-    background: var(--primary-color);
+    background: var(--semi-transparent);
 }
 
 /*==========JavaScript==========*/
@@ -160,4 +161,56 @@ body {
 .show-icon #closeMenu {
     opacity: 1;
     transform: rotate(90deg);
+}
+
+/*==========Dropdown==========*/
+.dropdown-button {
+    cursor: pointer;
+}
+#dropdown-arrow {
+    font-size: 1.5rem;
+    transition: transform .4s;
+}
+.dropdown-content, .dropdown-group, .dropdown-list {
+    display: grid;
+}
+.dropdown-container {
+    background: var(--semi-transparent);
+    height: 0;
+    overflow: hidden;
+}
+.dropdown-content {
+    row-gap: 1.8rem;
+}
+.dropdown-group {
+    row-gap: .5rem;
+    padding-left: 2rem;
+}
+.dropdown-group:first-child {
+    margin-block-start: 1.2rem;
+}
+.dropdown-group:last-child {
+    margin-block-end: 1.2rem;
+}
+.dropdown-icon {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+.dropdown-title {
+    font-size: var(--small-font);
+    font-weight: var(--font-semi);
+    color: var(--title-color);
+    text-transform: uppercase;
+}
+.dropdown-list {
+    row-gap: .3rem;
+}
+.dropdown-link {
+    font-size: var(--smaller-font);
+    font-weight: var(--font-medium);
+    color: var(--text-color);
+    transition: color .3s;
+}
+.dropdown-link:hover {
+    color: var(--title-color);
 }
